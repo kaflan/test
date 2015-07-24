@@ -6,11 +6,9 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
-      options: { separator: ';' },
       dist: {
-        files: {
-          'css/main.css': ['css/table.css', 'css/style.css']
-        }
+        src: ['css/table.css', 'css/style.css'],
+        dest: 'css/main.css'
       }
     },
     sass: {
@@ -23,19 +21,19 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'css/',
-          src: ['*.css', '!*.min.css'],
+          src: ['main.css', '!*.min.css'],
           dest: 'release/css',
           ext: '.min.css'
         }]
       }
     },
     uglify: {
-      my_target: {
+      target: {
         files: [{
           expand: true,
-          cwd: 'js/',
+          cwd: 'dist/',
           src: '**/*.js',
-          dest: 'dest/js',
+          dest: 'dist/',
           ext: '.min.js'
         }]
       }
@@ -43,9 +41,8 @@ module.exports = function (grunt) {
   });
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-newer');
-  grunt.registerTask('default', ['concat', 'sass']);
+  grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'uglify']);
 };
