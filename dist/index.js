@@ -32,6 +32,8 @@ window.addEventListener('load', function () {
     }
     function drawField(){
         var i;
+        var j;
+        var body = document.querySelector('body');
         for(i = 0; i < vals.length, i++) {
             
         }
