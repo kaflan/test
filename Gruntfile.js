@@ -6,14 +6,16 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
+      options: {separator: ';'},
       dist: {
-        src: ['css/table.css', 'css/style.css'],
+        src: ['css/table.css', 'css/style.css', 'css/button.css'],
         dest: 'css/main.css'
       }
     },
     sass: {
       dist: {
-        files: { 'css/main.css': 'css/main.scss' }
+        src: ['css/main.css'],
+        dest: 'css/main.scss' 
       }
     },
     cssmin: {
