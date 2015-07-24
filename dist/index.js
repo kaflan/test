@@ -1,15 +1,15 @@
 window.addEventListener('load', function () {
-    var divs = document.querySelector('.value');
-    var operator;
+    var selectVal = document.querySelector('.value');
+    var getAtribut;
     var vals = {
         "true": true,
         "false": false,
         "1": 1,
         "0": 0,
-         "-1": -1,
-         '"false"': "false",
+        "-1": -1,
+        '"false"': "false",
         '"true"': "true",
-        '"1"':'1',
+        '"1"': '1',
         '"0"': "0",
         '"-1"': "-1",
         '""': "",
@@ -24,10 +24,22 @@ window.addEventListener('load', function () {
         "undefined": undefined,
         "NaN": NaN
     };
-    divs.addEventListener('click', function (e) {
+    function createDiv() {
+        document.createElement('div');
+    }
+    function addCellClass(div) {
+        div.classList.add('cell');
+    }
+    function drawField(){
+        var i;
+        for(i = 0; i < vals.length, i++) {
+            
+        }
+    };
+    selectVal.addEventListener('click', function (e) {
         e.preventDefault();
-        operator = e.target.getAttribute('data-value');
-        console.log(operator);
+        getAtribut = e.target.getAttribute('data-value');
+        console.log(getAtribut);
         console.log('click');
 
     });
