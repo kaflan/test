@@ -1,5 +1,6 @@
 window.addEventListener('load', function () {
     var selectVal = document.querySelector('.value');
+    var newTable = document.querySelector('.draw');
     var getAtribut;
     var vals = {
         "true": true,
@@ -34,16 +35,20 @@ window.addEventListener('load', function () {
         var i;
         var j;
         var body = document.querySelector('body');
-        for(i = 0; i < vals.length, i++) {
-            
+        for(i = 0; i < vals.length; i++) {
+           
         }
-    };
+    }
     selectVal.addEventListener('click', function (e) {
         e.preventDefault();
         getAtribut = e.target.getAttribute('data-value');
         console.log(getAtribut);
         console.log('click');
-
+        selectVal.style.display = 'none';
+        newTable.style.display = 'block';
     });
-
+    newTable.addEventListener('click', function(){
+        newTable.style.display = 'none';
+        selectVal.style.display = 'block';
+    });
 });
