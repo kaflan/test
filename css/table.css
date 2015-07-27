@@ -1,14 +1,15 @@
 table {
-table-layout: fixed;	
+table-layout: fixed;
+width: 100%;	
 }
 table th td {
    border: 1px solid black;
 }
-table td.cell{
+table td.cell {
 	background-color: #5bbe5b;
   	border-color: #0b6c0b;
 }
-td{
+td {
 	width: 30px;
 	height: 30px;
 	border: 1px  solid brown;

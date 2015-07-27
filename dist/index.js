@@ -61,13 +61,11 @@ window.addEventListener('load', function funcq() {
   function drawField() {
     var i;
     var j;
-    var createTable = createEl('table');
-    var createTBody = createEl('tbody');  
+    var createTable = createEl('table'); 
     var createTr;
     var createTd;    
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
-      createTable.appendChild(createTBody);
       createTr = createEl('tr'); 
       for (j = 0; j < vals.length; j++) {
       createTd = createEl('td');
