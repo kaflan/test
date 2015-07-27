@@ -72,9 +72,9 @@ window.addEventListener('load', function funcq() {
       createTr = createEl('tr');
       createTd = createEl('td'); 
       for (j = 0; j < vals.length; j++) {
-         createTr = createEl('tr');
+      createTr = createEl('tr');
       createTd = createEl('td');
-      createTable.appendChild(createTr)
+      createTable.appendChild(createTr);
       createTr.appendChild(createTd);
       }
     }
