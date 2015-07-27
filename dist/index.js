@@ -64,7 +64,8 @@ window.addEventListener('load', function funcq() {
     var table;
     var tr;
     var td;
-    var createTable = createEl('table');  
+    var createTable = createEl('table');
+    var createTBody = createEl('tbody');  
     var createTr;
     var createTd;    
     for (i = 0; i < vals.length; i++) {
