@@ -68,17 +68,18 @@ window.addEventListener('load', function funcq() {
     }
   }
 
-  function gavno(one, two) {
-    if (one === two) {
-      return false;
-    }
+  function draW1(one, two) {
+    return one == two;
+  }
+  function draW2(one, two) {
+    return one === two;
   }
   selectVal.addEventListener('click', function selVal(e) {
     var getAtribut = e.target.getAttribute('data-value');
     selectVal.style.display = 'none';
     newTable.style.display = 'block';
     drawField();
-    gavno(getAtribut, vals[1]);
+    draW1(getAtribut, vals[1]);
   });
   newTable.addEventListener('click', function newTab() {
     newTable.style.display = 'none';
