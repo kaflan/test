@@ -67,8 +67,6 @@ window.addEventListener('load', function funcq() {
     var createTable = createEl('table');  
     var createTr;
     var createTd;    
-    var createP = createEl('p');
-    var p;
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
       createTr = createEl('tr');
