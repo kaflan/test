@@ -24,7 +24,7 @@ window.addEventListener('load', function funcq() {
   }, {
     '"-1"': '-1'
   }, {
-    '""': ''
+    '""': '""'
   }, {
     '"[[]]"': [
       []
@@ -48,44 +48,54 @@ window.addEventListener('load', function funcq() {
   }, {
     '"NaN"': NaN
   }];
-
+  
+  
   function createEl(el) {
-    document.createElement(el);
+   return document.createElement(el);
   }
 
   function addCellClass(div) {
-    div.classList.add('cell');
+   return div.classList.add('cell');
   }
 
   function drawField() {
     var i;
     var j;
+    var table;
+    var tr;
+    var td;
+    var createTable = createEl('table');  
+    var createTr = createEl('tr');
+    var createTd = createEl('td');    
+    var createP = createEl('p');
+    var p;
     for (i = 0; i < vals.length; i++) {
+      draw.appendChild(createTable);
       for (j = 0; j < vals.length; j++) {
-        createEl('div');
-        addCellClass('div');
+      createTable.appendChild(createTr)
+      createTr.appendChild(createTd);
       }
     }
   }
   function swithCase(param){
-  switch(param){
-    case param:
-    lal;
-    break;
-    default:
-    lal;
-  }
+ vals.map(function(item){
+   Object.getOwnPropertyNames(item).forEach(function(val){
+     // console.log(item[val]);
+     // console.log(item[val],param,item[val]);
+   });  
+ });
   }
   
   selectVal.addEventListener('click', function selVal(e) {
     var getAtribut = e.target.getAttribute('data-value');
     selectVal.style.display = 'none';
     newTable.style.display = 'block';
+    swithCase(getAtribut);
     drawField();
   });
   newTable.addEventListener('click', function newTab() {
     newTable.style.display = 'none';
     selectVal.style.display = 'block';
-    draw.innerHTMl = '';
+    draw.innerHTML = '';
   });
 });
