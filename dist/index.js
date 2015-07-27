@@ -2,6 +2,7 @@ window.addEventListener('load', function funcq() {
   'use strict';
   var selectVal = document.querySelector('.value');
   var newTable = document.querySelector('.newTable');
+  var tableBlock = document.querySelector('.draw');
   var draw = document.querySelector('.draw2');
   var vals = [{
     'true': true
@@ -86,12 +87,12 @@ window.addEventListener('load', function funcq() {
   selectVal.addEventListener('click', function selVal(e) {
     var getAtribut = e.target.getAttribute('data-value');
     selectVal.style.display = 'none';
-    newTable.style.display = 'block';
+    tableBlock.style.display = 'block';
     swithCase(getAtribut);
     drawField();
   });
   newTable.addEventListener('click', function newTab() {
-    newTable.style.display = 'none';
+    tableBlock.style.display = 'none';
     selectVal.style.display = 'block';
     draw.innerHTML = '';
   });
