@@ -1,7 +1,7 @@
 window.addEventListener('load', function funcq() {
   'use strict';
   var selectVal = document.querySelector('.value');
-  var newTable = document.querySelector('.draw');
+  var newTable = document.querySelector('.newTable');
   var draw = document.querySelector('.draw2');
   var vals = [{
     'true': true
