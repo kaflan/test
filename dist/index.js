@@ -65,12 +65,14 @@ window.addEventListener('load', function funcq() {
     var tr;
     var td;
     var createTable = createEl('table');  
-    var createTr = createEl('tr');
-    var createTd = createEl('td');    
+    var createTr;
+    var createTd;    
     var createP = createEl('p');
     var p;
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
+      createTr = createEl('tr');
+      createTd = createEl('td'); 
       for (j = 0; j < vals.length; j++) {
       createTable.appendChild(createTr)
       createTr.appendChild(createTd);
