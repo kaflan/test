@@ -69,7 +69,9 @@ window.addEventListener('load', function funcq() {
   }
   function swithCase(param){
   switch(param){
-    
+    case param:
+    lal;
+    break;
   }
   }
   
