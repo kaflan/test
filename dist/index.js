@@ -58,13 +58,22 @@ window.addEventListener('load', function funcq() {
   function addCellClass(div) {
    return div.classList.add('cell');
   }
+  function swithCase(param){
+ vals.map(function(item){
+   Object.getOwnPropertyNames(item).forEach(function(val){
+     // console.log(item[val]);
+     // console.log(item[val],param,item[val]);
+   });  
+ });
+  }
 
   function drawField() {
     var i;
     var j;
     var createTable = createEl('table'); 
     var createTr;
-    var createTd;    
+    var createTd;
+    var createHeadtab;    
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
       createTr = createEl('tr'); 
@@ -75,14 +84,7 @@ window.addEventListener('load', function funcq() {
       }
     }
   }
-  function swithCase(param){
- vals.map(function(item){
-   Object.getOwnPropertyNames(item).forEach(function(val){
-     // console.log(item[val]);
-     // console.log(item[val],param,item[val]);
-   });  
- });
-  }
+  
   
   selectVal.addEventListener('click', function selVal(e) {
     var getAtribut = e.target.getAttribute('data-value');
