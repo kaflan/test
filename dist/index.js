@@ -49,43 +49,43 @@ window.addEventListener('load', function funcq() {
   }, {
     '"NaN"': NaN
   }];
-  
-  
+
   function createEl(el) {
-   return document.createElement(el);
+    return document.createElement(el);
   }
 
   function addCellClass(div) {
-   return div.classList.add('cell');
+    return div.classList.add('cell');
   }
-  function swithCase(param){
- vals.map(function(item){
-   Object.getOwnPropertyNames(item).forEach(function(val){
-     // console.log(item[val]);
-     // console.log(item[val],param,item[val]);
-   });  
- });
+
+  function swithCase(param) {
+    vals.map(function(item) {
+      Object.getOwnPropertyNames(item).forEach(function(val) {
+        // console.log(item[val]);
+        // console.log(item[val],param,item[val]);
+      });
+    });
   }
 
   function drawField() {
     var i;
     var j;
-    var createTable = createEl('table'); 
+    var createTable = createEl('table');
     var createTr;
     var createTd;
-    var createHeadtab;    
+    var createHeadtab;
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
-      createTr = createEl('tr'); 
+      createTr = createEl('tr');
       for (j = 0; j < vals.length; j++) {
-      createTd = createEl('td');
-      createTable.appendChild(createTr);
-      createTr.appendChild(createTd);
+        createTd = createEl('td');
+        createTable.appendChild(createTr);
+        createTr.appendChild(createTd);
       }
     }
   }
-  
-  
+
+
   selectVal.addEventListener('click', function selVal(e) {
     var getAtribut = e.target.getAttribute('data-value');
     selectVal.style.display = 'none';
