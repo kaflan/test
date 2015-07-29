@@ -56,25 +56,18 @@ window.addEventListener('load', function funcq() {
     return div.classList.add('cell');
   }
 
-  function swithCase() {
+  function valsMap() {
     var k = [];
-    var g;
-    var i;
-    var j;
     var gus;
     vals.map(function(item) {
       Object.getOwnPropertyNames(item).forEach(function(val) {
         gus = item[val]; 
         k.push(gus);
         gus = '';
+        return k;
       });
     });
-     for(i = 0; i < vals.length; i++) {
-          for(j = 0; j< vals.length; j++) {
-           g = eval(k[i] +' ' + k[j]);
-           console.log(g);
-          } 
-        }
+     
   }
 
   function drawField() {
@@ -84,7 +77,7 @@ window.addEventListener('load', function funcq() {
     var createTr;
     var createTd;
     var createHeadtab;
-    swithCase();
+    valsMap();
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
       createTr = createEl('tr');
