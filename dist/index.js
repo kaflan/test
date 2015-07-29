@@ -62,6 +62,7 @@ window.addEventListener('load', function funcq() {
       Object.getOwnPropertyNames(item).forEach(function(val) {
         console.log(item[val] + ' ' +param + ' ' + item[val]);
         k = eval(item[val] +' ' +param + ' ' + item[val]);  
+        console.log(k);
       });
     });
   }
