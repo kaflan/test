@@ -56,7 +56,7 @@ window.addEventListener('load', function funcq() {
     return div.classList.add('cell');
   }
 
-  function swithCase(param) {
+  function swithCase() {
     var k = [];
     var g;
     var i;
@@ -69,22 +69,22 @@ window.addEventListener('load', function funcq() {
         gus = '';
       });
     });
-        for(i = 0; i < vals.length; i++) {
+     for(i = 0; i < vals.length; i++) {
           for(j = 0; j< vals.length; j++) {
-           g = eval(k[i]+ ' ' +param + ' ' + k[j]);
+           g = eval(k[i] +' ' + k[j]);
            console.log(g);
           } 
         }
   }
 
-  function drawField(param) {
+  function drawField() {
     var i;
     var j;
     var createTable = createEl('table');
     var createTr;
     var createTd;
     var createHeadtab;
-    swithCase(param);
+    swithCase();
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
       createTr = createEl('tr');
