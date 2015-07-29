@@ -27,11 +27,9 @@ window.addEventListener('load', function funcq() {
   }, {
     '""': '""'
   }, {
-    '"[[]]"': [
-      []
-    ]
+    '"[[]]"': '[[]]'
   }, {
-    '[]': []
+    '[]': '[]'
   }, {
     'null': null
   }, {
@@ -62,11 +60,9 @@ window.addEventListener('load', function funcq() {
     var k;
     vals.map(function(item) {
       Object.getOwnPropertyNames(item).forEach(function(val) {
-        // console.log(item[val]);
-        // console.log(item[val],param,item[val]);
+        console.log(item[val] + ' ' +param + ' ' + item[val]);
         k = eval(item[val] +' ' +param + ' ' + item[val]); 
         console.log(k); 
-        return k; 
       });
     });
   }
