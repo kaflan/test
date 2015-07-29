@@ -58,24 +58,22 @@ window.addEventListener('load', function funcq() {
 
   function swithCase(param) {
     var k = [];
-    var g = [];
+    var g;
     var i;
     var j;
     var gus;
     vals.map(function(item) {
       Object.getOwnPropertyNames(item).forEach(function(val) {
-        gus = ' ' + item[val];
-        console.log(item[val] + ' ' +param + ' ' + item[val]); 
+        gus = item[val]; 
         k.push(gus);
         gus = '';
       });
     });
         for(i = 0; i < vals.length; i++) {
-          for(j = 0; j< vals.length; i++) {
-            
+          for(j = 0; j< vals.length; j++) {
+            console.log('2sec for',k[i]+ ' ' +param + ' ' + k[j]);
           } 
         }
-    });
   }
 
   function drawField(param) {
