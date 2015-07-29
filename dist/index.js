@@ -41,7 +41,7 @@ window.addEventListener('load', function funcq() {
   }, {
     '"Infinity"': Infinity
   }, {
-    '"{}"': '{}'
+    '"{}"': {}
   }, {
     '"undefined"': 'undefined'
   }, {
@@ -66,13 +66,14 @@ window.addEventListener('load', function funcq() {
     });
   }
 
-  function drawField() {
+  function drawField(param) {
     var i;
     var j;
     var createTable = createEl('table');
     var createTr;
     var createTd;
     var createHeadtab;
+    swithCase(param);
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
       createTr = createEl('tr');
@@ -89,8 +90,7 @@ window.addEventListener('load', function funcq() {
     var getAtribut = e.target.getAttribute('data-value');
     selectVal.style.display = 'none';
     tableBlock.style.display = 'block';
-    swithCase(getAtribut);
-    drawField();
+    drawField(getAtribut);
   });
   newTable.addEventListener('click', function newTab() {
     tableBlock.style.display = 'none';
