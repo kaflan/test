@@ -57,13 +57,24 @@ window.addEventListener('load', function funcq() {
   }
 
   function swithCase(param) {
-    var k;
+    var k = [];
+    var g = [];
+    var i;
+    var j;
+    var gus;
     vals.map(function(item) {
       Object.getOwnPropertyNames(item).forEach(function(val) {
-        console.log(item[val] + ' ' +param + ' ' + item[val]);
-        k = eval(item[val] +' ' +param + ' ' + item[val]);  
-        console.log(k);
+        gus = ' ' + item[val];
+        console.log(item[val] + ' ' +param + ' ' + item[val]); 
+        k.push(gus);
+        gus = '';
       });
+    });
+        for(i = 0; i < vals.length; i++) {
+          for(j = 0; j< vals.length; i++) {
+            
+          } 
+        }
     });
   }
 
