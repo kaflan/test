@@ -43,7 +43,7 @@ window.addEventListener('load', function funcq() {
   }, {
     '"{}"': {}
   }, {
-    '"undefined"': 'undefined'
+    '"undefined"': undefined
   }, {
     '"NaN"': NaN
   }];
@@ -71,7 +71,8 @@ window.addEventListener('load', function funcq() {
     });
         for(i = 0; i < vals.length; i++) {
           for(j = 0; j< vals.length; j++) {
-            console.log('2sec for',k[i]+ ' ' +param + ' ' + k[j]);
+           g = eval(k[i]+ ' ' +param + ' ' + k[j]);
+           console.log(g);
           } 
         }
   }
