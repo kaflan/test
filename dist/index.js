@@ -87,8 +87,7 @@ window.addEventListener('load', function funcq() {
         createTr.appendChild(createTd);
         if (marG[i] === marG[i]) {
             addCellClass(createTd);
-        }
-        
+        }        
       }
     }
   }
