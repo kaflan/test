@@ -88,6 +88,7 @@ window.addEventListener('load', function funcq() {
         if (marG[i] === marG[i]) {
             addCellClass(createTd);
         }
+        
       }
     }
   }
