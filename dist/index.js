@@ -61,13 +61,12 @@ window.addEventListener('load', function funcq() {
     var gus;
     vals.map(function(item) {
       Object.getOwnPropertyNames(item).forEach(function(val) {
-        gus = item[val]; 
+        gus = item[val];
         k.push(gus);
         gus = '';
-        return k;
       });
     });
-     
+    return k;
   }
 
   function drawField() {
@@ -77,14 +76,18 @@ window.addEventListener('load', function funcq() {
     var createTr;
     var createTd;
     var createHeadtab;
-    valsMap();
+    var marG = valsMap();
     for (i = 0; i < vals.length; i++) {
       draw.appendChild(createTable);
       createTr = createEl('tr');
       for (j = 0; j < vals.length; j++) {
+        console.log(marG[i]);
         createTd = createEl('td');
         createTable.appendChild(createTr);
         createTr.appendChild(createTd);
+        if (marG[i] === marG[i]) {
+            addCellClass(createTd);
+        }
       }
     }
   }
