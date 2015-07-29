@@ -31,19 +31,19 @@ window.addEventListener('load', function funcq() {
   }, {
     '[]': '[]'
   }, {
-    'null': null
+    'null': 'null'
   }, {
-    '"[0]"': [0]
+    '"[0]"': '[0]'
   }, {
-    '"[1]"': [1]
+    '"[1]"': '[1]'
   }, {
     '"-Infinity"': -Infinity
   }, {
     '"Infinity"': Infinity
   }, {
-    '"{}"': {}
+    '"{}"': '{}'
   }, {
-    '"undefined"': undefined
+    '"undefined"': 'undefined'
   }, {
     '"NaN"': NaN
   }];
@@ -85,9 +85,12 @@ window.addEventListener('load', function funcq() {
         createTd = createEl('td');
         createTable.appendChild(createTr);
         createTr.appendChild(createTd);
-        if (marG[i] === marG[i]) {
+        createHeadtab = document.querySelectorAll('td');
+        createHeadtab[i].textContent = marG[i];
+        // createHeadtab[i].textContent = marG[j];
+        if (marG[i] === marG[j]) {
             addCellClass(createTd);
-        }        
+        }
       }
     }
   }
